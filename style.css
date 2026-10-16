@@ -1,0 +1,48 @@
+:root { color-scheme: dark; --fundo: #081625; --painel: #102439; --borda: #31516d; --texto: #f6f9fe; --suave: #b9c9da; --azul: #65bcff; --laranja: #ffa33f; }
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(circle at 70% 8%, #17416c 0, transparent 40%), var(--fundo); color: var(--texto); font: 15px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+.topo { border-bottom: 1px solid #24415d; background: rgba(8, 22, 37, .92); }
+.topo-conteudo { display: flex; align-items: center; gap: 12px; width: min(1100px, calc(100% - 36px)); margin: auto; padding: 17px 0; }
+.topo img { display: block; border: 1px solid var(--borda); border-radius: 10px; object-fit: cover; }
+.topo strong, .topo span { display: block; }
+.topo strong { font-size: 1.15rem; line-height: 1.2; }
+.topo span { color: var(--suave); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; }
+.topo .selo { margin-left: auto; padding: 5px 10px; border: 1px solid #46799b; border-radius: 999px; color: #bbdffd; font-size: .72rem; }
+main { width: min(1100px, calc(100% - 36px)); margin: auto; padding: 52px 0 60px; }
+.introducao { max-width: 770px; }
+.sobretitulo { margin: 0 0 12px; color: var(--laranja); font-size: .75rem; font-weight: 800; letter-spacing: .16em; }
+h1, h2, p { margin-top: 0; }
+h1 { margin-bottom: 15px; font-size: clamp(2.2rem, 5vw, 4.3rem); line-height: 1.08; letter-spacing: -.035em; }
+.introducao > p:not(.sobretitulo) { max-width: 670px; color: #d0dfec; font-size: 1.05rem; }
+.aviso { margin: 26px 0 33px; padding: 14px 17px; border: 1px solid #886640; border-radius: 10px; background: #302218; color: #f8dfbf; }
+.aplicativos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.cartao { min-width: 0; padding: 27px; border: 1px solid var(--borda); border-radius: 18px; background: linear-gradient(140deg, #15334d, var(--painel) 55%); box-shadow: 0 20px 45px rgba(0, 0, 0, .24); }
+.cartao.admin { background: linear-gradient(140deg, #20304c, var(--painel) 55%); }
+.cartao-topo { display: flex; align-items: center; gap: 12px; margin-bottom: 17px; }
+.icone { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 11px; background: #236ba1; color: white; font-size: 1.2rem; font-weight: 900; }
+.admin .icone { background: #785126; }
+.tipo { color: #afd9f6; font-size: .72rem; font-weight: 800; letter-spacing: .13em; }
+.admin .tipo { color: #f8cf9d; }
+.cartao h2 { margin-bottom: 7px; font-size: 1.8rem; }
+.cartao > p { min-height: 51px; color: var(--suave); }
+.cartao ul { display: grid; gap: 7px; margin: 22px 0; padding: 17px 0; border-top: 1px solid #33516b; border-bottom: 1px solid #33516b; list-style: none; }
+.cartao li { display: flex; justify-content: space-between; gap: 15px; }
+.cartao li span { color: var(--suave); }
+.cartao li strong { text-align: right; font-size: .92rem; }
+.botao { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 13px 17px; border-radius: 9px; background: #2d8bd0; color: #fff; font-weight: 800; text-decoration: none; transition: transform .2s, background .2s; }
+.botao:hover { background: #48a2e3; transform: translateY(-2px); }
+.admin .botao { background: #ef9e42; color: #1f2430; }
+.admin .botao:hover { background: #ffc074; }
+.botao span { font-size: 1.3rem; line-height: 1; }
+details { margin-top: 18px; color: var(--suave); font-size: .8rem; }
+summary { cursor: pointer; }
+details p { margin: 8px 0 0; }
+code { overflow-wrap: anywhere; color: #dcecff; font-size: .75rem; }
+.orientacao { margin-top: 28px; padding: 22px 25px; border: 1px solid #2a4862; border-radius: 14px; background: rgba(16, 36, 57, .8); }
+.orientacao h2 { margin-bottom: 4px; font-size: 1.17rem; }
+.orientacao p { margin-bottom: 0; color: var(--suave); }
+footer { padding: 20px; border-top: 1px solid #24415d; color: #92a8bd; text-align: center; font-size: .8rem; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #ffd18d; outline-offset: 3px; }
+@media (max-width: 760px) { main { padding-top: 36px; } .aplicativos { grid-template-columns: 1fr; } .cartao > p { min-height: 0; } }
+@media (max-width: 400px) { .cartao { padding: 21px; } .cartao li { display: block; } .cartao li strong { display: block; text-align: left; } }
+@media (prefers-reduced-motion: reduce) { .botao { transition: none; } }
